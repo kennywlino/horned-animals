@@ -12,4 +12,4 @@ class HornedBeast extends React.Component {
     }
 }
 
-default export HornedBeast;
+export default HornedBeast;
