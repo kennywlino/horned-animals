@@ -2,21 +2,22 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
-import HornedBeast from './HornedBeast.js';
-import data from '../assets/data.json';
+import HornedBeast from './HornedBeast';
 
 class Main extends React.Component {
     render() {
-        let animals = data.map((element, index) => {
+        let animals = this.props.data.map((element, index) => {
             return <HornedBeast
                 title={element.title}
                 imageUrl={element.image_url}
                 description={element.description}
-                key={index}
+                key={element._id}
+                handleOpenModal={this.props.handleOpenModal}
             />
         });
 
-        return(
+
+        return (
             <>
                 <Container fluid>
                     <Row>
