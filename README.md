@@ -10,7 +10,7 @@ Horned Animals is a project from Code Fellows: Code 301 that allow us to get fam
 
 | #   | Name of feature | Estimated time (h:m) | Start time | Finish time | Actual time (h:m) |
 | --- | --------------- | -------------------- | ---------- | ----------- | ----------------- |
-| 1   | Display a modal | 0:40                 | 2:05pm     |             |                   |
+| 1   | Display a modal | 0:40                 | 2:05pm     | 3:25pm      | 1:20              |
 
 ### Class 02
 

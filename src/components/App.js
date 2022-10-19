@@ -14,6 +14,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
+      selectedBeast: 'none',
     }
   }
 
@@ -23,9 +24,10 @@ class App extends React.Component {
     })
   }
 
-  handleOpenModal = () => {
+  handleOpenModal = (beast) => {
     this.setState({
-      showModal: true
+      showModal: true,
+      selectedBeast: beast,
     })
   }
 
@@ -41,6 +43,7 @@ class App extends React.Component {
     <SelectedBeast 
       showModal={this.state.showModal}
       handleCloseModal={this.handleCloseModal}
+      beast={this.state.selectedBeast}
       />
     </>
    )

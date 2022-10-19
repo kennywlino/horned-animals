@@ -2,6 +2,7 @@ import React from 'react';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
  
 class HornedBeast extends React.Component {
     constructor(props) {
@@ -11,7 +12,6 @@ class HornedBeast extends React.Component {
         }
     }
 
-    // move into a button instead
     handleFavCount = () => { 
         this.setState({
             favCount: this.state.favCount + 1,
@@ -19,7 +19,7 @@ class HornedBeast extends React.Component {
     }
 
     handleImgClick = () => {
-        this.props.handleOpenModal()
+        this.props.handleOpenModal(this.props)
     }
 
     render() {
@@ -29,7 +29,10 @@ class HornedBeast extends React.Component {
                     <Card.Header>{this.props.title}</Card.Header>
                     <Card.Img variant="top" src={this.props.imageUrl} alt={this.props.title} onClick={this.handleImgClick} />
                     <ListGroup>
-                        <ListGroup.Item className="text-center">{this.state.favCount} favorites 💗</ListGroup.Item>
+                        <ListGroup.Item className="text-center">
+                            <Button variant="primary" onClick={this.handleFavCount}>Show me some love!</Button>
+                        </ListGroup.Item>
+                        <ListGroup.Item className="text-center">{this.state.favCount} favorites 💗 </ListGroup.Item>
                     </ListGroup>
                     <Card.Body>
                         <Card.Text>
