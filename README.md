@@ -10,7 +10,7 @@ Horned Animals is a project from Code Fellows: Code 301 that allow us to get fam
 
 | #   | Name of feature           | Estimated time (h:m) | Start time | Finish time | Actual time (h:m) |
 | --- | ------------------------- | -------------------- | ---------- | ----------- | ----------------- |
-| 1   | Filter by Number of Horns | 1:00                 | 3:15pm     |             |                   |
+| 1   | Filter by Number of Horns | 1:00                 | 3:15pm     | 8:40pm      | 4:00 (w/ breaks)  |
 
 ### Class 03
 

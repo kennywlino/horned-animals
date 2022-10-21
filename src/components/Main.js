@@ -21,8 +21,7 @@ class Main extends React.Component {
         if (this.props.selectedNumOfHorns !== -1) {
             filteredAnimals = animals.filter(element => element.props.horns === this.props.selectedNumOfHorns);
         }
-        console.log(this.props.selectedNumOfHorns);
-
+        
         return (
             <>
                 <Container fluid>
