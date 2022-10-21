@@ -15,7 +15,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
-      selectedBeast: 'none',
+      selectedBeast: {},
+      selectedNumOfHorns: -1,
     }
   }
 
@@ -32,14 +33,21 @@ class App extends React.Component {
     })
   }
 
+  setSelectedNumOfHorns = (num) => {
+    this.setState({
+      selectedNumOfHorns: num
+    })
+  }
+
   render() {
    return (
     <>
     <Header />
-    <Filter />
+    <Filter setSelectedNumOfHorns={this.setSelectedNumOfHorns}/>
     <Main 
       data={data}
       handleOpenModal={this.handleOpenModal}
+      selectedNumOfHorns={this.state.selectedNumOfHorns}
     />
     <Footer />
     <SelectedBeast 

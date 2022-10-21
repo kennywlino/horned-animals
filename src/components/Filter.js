@@ -1,12 +1,27 @@
 import React from 'react';
 
 import Form from 'react-bootstrap/Form';
-
+    
 class Filter extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedVal: '',
+        }
+    }
+
+    handleSelect = (event) => {
+        let selectedVal = Number(event.target.value);
+        this.setState({
+            selectedVal 
+        })
+        this.props.setSelectedNumOfHorns(selectedVal);
+    }
+
     render() {
-        let numOptions = [1, 2, 3, 100];
-        let options = numOptions.map(element => {
-            return <option value={element}>{element}</option>
+        let possibleOptions = [-1, 1, 2, 3, 100];
+        let options = possibleOptions.map((element, index)=> {
+            return <option value={element} key={index}>{element}</option>
             });
         return (
             <Form>
