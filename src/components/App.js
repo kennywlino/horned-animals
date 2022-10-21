@@ -5,6 +5,7 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
+import Filter from './Filter.js';
 
 import data from '../assets/data.json';
 
@@ -14,7 +15,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       showModal: false,
-      selectedBeast: 'none',
+      selectedBeast: {},
+      selectedNumOfHorns: -1,
     }
   }
 
@@ -31,13 +33,21 @@ class App extends React.Component {
     })
   }
 
+  setSelectedNumOfHorns = (num) => {
+    this.setState({
+      selectedNumOfHorns: num
+    })
+  }
+
   render() {
    return (
     <>
     <Header />
+    <Filter setSelectedNumOfHorns={this.setSelectedNumOfHorns}/>
     <Main 
       data={data}
       handleOpenModal={this.handleOpenModal}
+      selectedNumOfHorns={this.state.selectedNumOfHorns}
     />
     <Footer />
     <SelectedBeast 
