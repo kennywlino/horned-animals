@@ -17,6 +17,7 @@ class App extends React.Component {
       showModal: false,
       selectedBeast: {},
       selectedNumOfHorns: -1,
+      possibleNumOfHorns: [],
     }
   }
 
@@ -39,6 +40,12 @@ class App extends React.Component {
     })
   }
 
+  setPossibleNumOfHorns = (numArr) => {
+    this.setState({
+      possibleNumOfHorns: numArr
+    })
+  }
+
   render() {
    return (
     <>
@@ -48,6 +55,7 @@ class App extends React.Component {
       data={data}
       handleOpenModal={this.handleOpenModal}
       selectedNumOfHorns={this.state.selectedNumOfHorns}
+      setPossibleNumOfHorns={this.setPossibleNumOfHorns}
     />
     <Footer />
     <SelectedBeast 
