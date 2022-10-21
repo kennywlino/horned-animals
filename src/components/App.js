@@ -5,6 +5,7 @@ import Header from './Header.js';
 import Footer from './Footer.js';
 import Main from './Main.js';
 import SelectedBeast from './SelectedBeast.js';
+import Filter from './Filter.js';
 
 import data from '../assets/data.json';
 
@@ -35,6 +36,7 @@ class App extends React.Component {
    return (
     <>
     <Header />
+    <Filter />
     <Main 
       data={data}
       handleOpenModal={this.handleOpenModal}
